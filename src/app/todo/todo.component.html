@@ -1,0 +1,258 @@
+<!-- <div class="slds-scope">
+  <div class="slds-page-header slds-grid slds-grid_vertical-align-center">
+    <div class="slds-media slds-no-space slds-grow">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-task">
+          <div style="background: #b63e5a; padding: 5px; border-radius: 4px;">📝</div>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h1 class="slds-page-header__title">Tasks</h1>
+        <p class="slds-text-body_small">All Tasks</p>
+        <p class="slds-text-body_small">{{tasks().length}} records</p>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex">
+      <button class="slds-button slds-button_brand" (click)="openNewTask()" style="background: #fce391; color: #555; border: 1px solid #ccc;">New Task</button>
+      <button class="slds-button slds-button_neutral" style="background: #fce391; color: #555; border: 1px solid #ccc;">Refresh</button>
+    </div>
+  </div>
+
+  <div class="slds-form-element slds-m-around_small" style="width: 300px; float: right;">
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+      <input type="text" class="slds-input" placeholder="Search" />
+    </div>
+  </div>
+
+  <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+    <thead>
+      <tr class="slds-line-height_reset">
+        <th scope="col" style="width: 32px;"><input type="checkbox" /></th>
+        <th scope="col">Assigned To</th>
+        <th scope="col">Status</th>
+        <th scope="col">Due Date</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Comments</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks()" class="slds-hint-parent">
+        <td><input type="checkbox" /></td>
+        <td><a href="javascript:void(0);">{{task.assignedTo}}</a></td>
+        <td>{{task.status}}</td>
+        <td>{{task.dueDate}}</td>
+        <td>{{task.priority}}</td>
+        <td>{{task.description}}</td>
+        <td>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" (click)="openEditTask(task)">Edit</button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" (click)="confirmDelete(task.id!)">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section *ngIf="showModal" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <h2 class="slds-modal__title">{{ isEditMode ? 'Edit Task' : 'New Task' }}</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium">
+        <div class="slds-grid slds-wrap slds-gutters">
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label><span style="color:red">*</span> Assigned To</label>
+            <select class="slds-select" [(ngModel)]="currentTask.assignedTo">
+              <option>User 1</option>
+              <option>User 2</option>
+            </select>
+          </div>
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label><span style="color:red">*</span> Status</label>
+            <select class="slds-select" [(ngModel)]="currentTask.status">
+                <option>Not Started</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+          </div>
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label>Due Date</label>
+            <input type="date" class="slds-input" [(ngModel)]="currentTask.dueDate" />
+          </div>
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label><span style="color:red">*</span> Priority</label>
+            <select class="slds-select" [(ngModel)]="currentTask.priority">
+                <option>Normal</option>
+                <option>High</option>
+                <option>Low</option>
+            </select>
+          </div>
+          <div class="slds-col slds-size_1-of-1">
+            <label>Description</label>
+            <textarea class="slds-textarea" [(ngModel)]="currentTask.description"></textarea>
+          </div>
+        </div>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral" (click)="closeModal()" style="background: #fce391;">Cancel</button>
+        <button class="slds-button slds-button_brand" (click)="saveTask()" style="background: #7a8a7a;">Save</button>
+      </footer>
+    </div>
+  </section>
+  <div *ngIf="showModal || showDeleteModal" class="slds-backdrop slds-backdrop_open"></div>
+
+  <section *ngIf="showDeleteModal" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container" style="max-width: 400px;">
+      <header class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+        <h2 class="slds-modal__title">Delete</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium slds-text-align_center">
+        <p>Do you want to delete task?</p>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral" (click)="showDeleteModal = false" style="background: #7a8a7a; color: white;">No</button>
+        <button class="slds-button slds-button_brand" (click)="deleteTask()" style="background: #fce391; color: black; border:none;">Yes</button>
+      </footer>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+ -->
+<div class="slds-scope">
+  <div class="slds-page-header slds-grid slds-grid_vertical-align-center">
+    <div class="slds-media slds-no-space slds-grow">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-task">
+          <div style="background: #b63e5a; padding: 5px; border-radius: 4px;">📝</div>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h1 class="slds-page-header__title">Tasks</h1>
+        <p class="slds-text-body_small">All Tasks</p>
+        <p class="slds-text-body_small">{{tasks().length}} records</p>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex">
+      <button class="slds-button slds-button_brand" (click)="openNewTask()" style="background: #fce391; color: #555; border: 1px solid #ccc;">New Task</button>
+      <button class="slds-button slds-button_neutral" style="background: #fce391; color: #555; border: 1px solid #ccc;">Refresh</button>
+    </div>
+  </div>
+
+  <div class="slds-form-element slds-m-around_small" style="width: 300px; float: right;">
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+      <input type="text" class="slds-input" placeholder="Search" />
+    </div>
+  </div>
+
+  <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+    <thead>
+      <tr class="slds-line-height_reset">
+        <th scope="col" style="width: 32px;"><input type="checkbox" /></th>
+        <th scope="col">Assigned To</th>
+        <th scope="col">Status</th>
+        <th scope="col">Due Date</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Comments</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of pagedTasks()" class="slds-hint-parent">
+        <td><input type="checkbox" /></td>
+        <td><a href="javascript:void(0);">{{task.assignedTo}}</a></td>
+        <td>{{task.status}}</td>
+        <td>{{task.dueDate}}</td>
+        <td>{{task.priority}}</td>
+        <td>{{task.description}}</td>
+        <td>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" (click)="openEditTask(task)">Edit</button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" (click)="confirmDelete(task.id!)">Del</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="slds-p-around_small slds-grid slds-grid_align-spread slds-grid_vertical-align-center" style="background: #f3f3f3; border: 1px solid #dddbda; border-top: 0;">
+    <div>
+        <label class="slds-m-right_small">Items per page:</label>
+        <select [(ngModel)]="pageSize" (change)="currentPage.set(1)" style="padding: 2px; border-radius: 4px;">
+            <option [ngValue]="3">3</option>
+            <option [ngValue]="5">5</option>
+            <option [ngValue]="10">10</option>
+        </select>
+    </div>
+    
+    <div class="slds-button-group" role="group">
+      <button class="slds-button slds-button_neutral" (click)="prevPage()" [disabled]="currentPage() === 1">Prev</button>
+      <span class="slds-p-horizontal_medium">Page {{currentPage()}} of {{totalPages()}}</span>
+      <button class="slds-button slds-button_neutral" (click)="nextPage()" [disabled]="currentPage() >= totalPages()">Next</button>
+    </div>
+  </div>
+
+  <section *ngIf="showModal" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <h2 class="slds-modal__title">{{ isEditMode ? 'Edit Task' : 'New Task' }}</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium">
+        <div class="slds-grid slds-wrap slds-gutters">
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label><span style="color:red">*</span> Assigned To</label>
+            <select class="slds-select" [(ngModel)]="currentTask.assignedTo">
+              <option>User 1</option>
+              <option>User 2</option>
+              <option>User 3</option>
+            </select>
+          </div>
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label><span style="color:red">*</span> Status</label>
+            <select class="slds-select" [(ngModel)]="currentTask.status">
+                <option>Not Started</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+          </div>
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label>Due Date</label>
+            <input type="date" class="slds-input" [(ngModel)]="currentTask.dueDate" />
+          </div>
+          <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+            <label><span style="color:red">*</span> Priority</label>
+            <select class="slds-select" [(ngModel)]="currentTask.priority">
+                <option>Normal</option>
+                <option>High</option>
+                <option>Low</option>
+            </select>
+          </div>
+          <div class="slds-col slds-size_1-of-1">
+            <label>Description</label>
+            <textarea class="slds-textarea" [(ngModel)]="currentTask.description"></textarea>
+          </div>
+        </div>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral" (click)="closeModal()" style="background: #fce391;">Cancel</button>
+        <button class="slds-button slds-button_brand" (click)="saveTask()" style="background: #7a8a7a;">Save</button>
+      </footer>
+    </div>
+  </section>
+  <div *ngIf="showModal || showDeleteModal" class="slds-backdrop slds-backdrop_open"></div>
+
+  <section *ngIf="showDeleteModal" class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container" style="max-width: 400px;">
+      <header class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+        <h2 class="slds-modal__title">Delete</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium slds-text-align_center">
+        <p>Do you want to delete task?</p>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_neutral" (click)="showDeleteModal = false" style="background: #7a8a7a; color: white;">No</button>
+        <button class="slds-button slds-button_brand" (click)="deleteTask()" style="background: #fce391; color: black; border:none;">Yes</button>
+      </footer>
+    </div>
+  </section>
+</div>

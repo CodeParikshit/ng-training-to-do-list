@@ -1,0 +1,12 @@
+/* Custom overrides to match the exact wireframe colors */
+.slds-theme_error {
+    background-color: #b63e5a !important; /* The red header in delete modal */
+}
+
+.slds-modal__header {
+    font-weight: bold;
+}
+
+.slds-table thead th {
+    background-color: #f8f8f8;
+}

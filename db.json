@@ -1,0 +1,31 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "assignedTo": "User 1",
+      "status": "Completed",
+      "dueDate": "2024-10-12",
+      "priority": "Low",
+      "description": "Task from database"
+    },
+    {
+      "id": "2",
+      "assignedTo": "User 2",
+      "status": "In Progress",
+      "dueDate": "2024-09-14",
+      "priority": "High",
+      "description": "Another task"
+    },
+    {
+      "id": "071c"
+    },
+    {
+      "id": "11d3",
+      "assignedTo": "Postman User",
+      "status": "In Progress",
+      "dueDate": "2026-01-02",
+      "priority": "High",
+      "description": "I created this task using Postman!"
+    }
+  ]
+}
