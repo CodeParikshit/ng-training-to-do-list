@@ -21,6 +21,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 
 ### 2. New/Edit Task Modal
 ![Task Form Modal](https://github.com/user-attachments/assets/40a18cd3-65cb-4b64-92cd-186a5de883ad)
+(https://github.com/user-attachments/assets/1468d84e-908f-4a84-a24f-7e3fc724a4b5)
 *Intuitive modal form for adding and updating task details with validation.*
 
 ### 3. Delete Confirmation
@@ -52,6 +53,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 git clone [https://github.com/CodeParikshit/ng-training-to-do-list.git](https://github.com/CodeParikshit/ng-training-to-do-list.git)
 cd ng-training-to-do-list
 npm install
+
 
 
 
