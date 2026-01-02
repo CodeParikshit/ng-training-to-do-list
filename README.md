@@ -14,7 +14,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 ## 📸 Screenshots
 
 ### 1. Main Task List (View)
-![Task List View](https://via.placeholder.com/800x400?text=Insert+Screenshot+of+your+Task+List+Table)
+![Task List View]("C:\Users\rautn\Pictures\Screenshots\Screenshot 2026-01-02 200614.png")
 *The main dashboard showing paginated tasks, status, and priority.*
 
 ### 2. New/Edit Task Modal
@@ -50,3 +50,4 @@ A professional, responsive To-Do List application built with **Angular** and **S
 git clone [https://github.com/CodeParikshit/ng-training-to-do-list.git](https://github.com/CodeParikshit/ng-training-to-do-list.git)
 cd ng-training-to-do-list
 npm install
+
