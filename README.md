@@ -16,7 +16,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 
 
 ### 1. Main Task List (View)
-![Task List View](https://github.com/user-attachments/assets/1468d84e-908f-4a84-a24f-7e3fc724a4b5)
+![Delete Confirmation](https://github.com/user-attachments/assets/0906081b-960d-4c7d-8d3f-c6cb7bc795ad)
 *The main dashboard showing paginated tasks, status, and priority.*
 
 ### 2. New/Edit Task Modal
@@ -24,7 +24,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 *Intuitive modal form for adding and updating task details with validation.*
 
 ### 3. Delete Confirmation
-![Delete Confirmation](https://github.com/user-attachments/assets/0906081b-960d-4c7d-8d3f-c6cb7bc795ad)
+![Task List View](https://github.com/user-attachments/assets/1468d84e-908f-4a84-a24f-7e3fc724a4b5)
 *Safety check before removing data from the database.*.*
 
 ---
@@ -52,6 +52,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 git clone [https://github.com/CodeParikshit/ng-training-to-do-list.git](https://github.com/CodeParikshit/ng-training-to-do-list.git)
 cd ng-training-to-do-list
 npm install
+
 
 
 
