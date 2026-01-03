@@ -28,6 +28,10 @@ A professional, responsive To-Do List application built with **Angular** and **S
 ![Task List View](https://github.com/user-attachments/assets/88057f8c-1fde-476b-b66c-ff4352618cf8)
 *Safety check before removing data from the database.*.*
 
+### 3. Screen recording of project
+![Task List View](https://github.com/user-attachments/assets/88057f8c-1fde-476b-b66c-ff4352618cf8)
+*Safety check before removing data from the database.*.*
+
 ---
 
 ## 🛠️ Tech Stack & Best Practices
@@ -53,6 +57,7 @@ A professional, responsive To-Do List application built with **Angular** and **S
 git clone [https://github.com/CodeParikshit/ng-training-to-do-list.git](https://github.com/CodeParikshit/ng-training-to-do-list.git)
 cd ng-training-to-do-list
 npm install
+
 
 
 
